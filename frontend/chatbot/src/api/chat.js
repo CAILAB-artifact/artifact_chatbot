@@ -1,5 +1,8 @@
 import API_BASE_URL from "./config";
 
+// 환경변수 값 확인용 로그 (배포 후 브라우저 콘솔에서 확인 가능)
+console.log("🔗 API BASE URL is:", API_BASE_URL);
+
 export async function sendChatMessage({ userId, message, artifactId }) {
   const res = await fetch(`${API_BASE_URL}/chat`, {
     method: "POST",
